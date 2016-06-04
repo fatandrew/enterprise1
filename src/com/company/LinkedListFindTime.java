@@ -17,7 +17,7 @@ public class LinkedListFindTime {
         Integer r = random.nextInt(10000);
         long endAddTime = 0;
         for (int i = 0; i < 10000; i++) {
-            linkedList.add(r);
+            linkedList.add(i);
             endAddTime = System.currentTimeMillis();
 
         }

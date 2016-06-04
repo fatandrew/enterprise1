@@ -12,11 +12,12 @@ public class HashSetFindTime {
         HashSet<Integer> integers = new HashSet<>();
         Random random = new Random();
 
-        long startAddTime = System.currentTimeMillis();
         long endAddTime = 0;
+        long startAddTime = 0;
         for (int i = 0; i < 10000; i++) {
+            startAddTime = System.currentTimeMillis();
 
-            Integer a = random.nextInt(111);
+            Integer a = random.nextInt(1000);
             integers.add(a);
 
             endAddTime = System.currentTimeMillis();
@@ -25,9 +26,11 @@ public class HashSetFindTime {
         System.out.println(endAddTime - startAddTime + " ms");
         System.out.println(integers);
 
-        long startRemoveTime = System.currentTimeMillis();
         long endRemoveTime = 0;
+        long startRemoveTime = 0;
         for (int i = 0; i < 10000; i++) {
+            startRemoveTime = System.currentTimeMillis();
+
             Integer re = random.nextInt(111);
             integers.add(re);
             Integer r = random.nextInt(111);
@@ -40,12 +43,15 @@ public class HashSetFindTime {
         System.out.println(integers);
 
         long endContainsTime = 0;
+        long startContainsTime = 0;
         for (int i = 0; i < 10000; i++) {
+
+            startContainsTime = System.currentTimeMillis();
             Integer r = random.nextInt(10000);
             integers.contains(r);
 
 
             endContainsTime = System.currentTimeMillis();
         }
-        System.out.println(endContainsTime - startAddTime+" ms");
+        System.out.println(endContainsTime - startContainsTime + " ms");
     }}
